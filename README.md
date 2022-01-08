@@ -1,1 +1,1 @@
-# she-sci-code
+# sci-code
