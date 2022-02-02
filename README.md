@@ -21,4 +21,9 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+### Tailwind Build
+tailwind was not configuring found that I needed to run the following command to have it render correctly for the html. Still not sure if this will have to happen everytime?
+
+```command
+rails tailwindcss:build
+```
