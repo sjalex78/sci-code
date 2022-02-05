@@ -8,6 +8,14 @@ class PostersController < ApplicationController
 
   # GET /posters/1 or /posters/1.json
   def show
+    respond_to do |format|
+    format.html
+    format.pdf do
+      render template: "posters/show", #.html.erb taken out as it is not needed for Rails 7
+        pdf: "Poster: #{@poster.id}"
+        # formats: :html
+      end
+    end
   end
 
   # GET /posters/new

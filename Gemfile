@@ -80,3 +80,8 @@ gem "rubocop", "~> 1.25"
 gem "rubocop-rspec", "~> 2.8"
 gem "rubocop-rake", "~> 0.6.0"
 gem "rubocop-performance", "~> 1.13"
+
+#gems for html to pdf
+gem 'wicked_pdf'
+gem "wkhtmltopdf-binary", group: :development
+gem "wkhtmltopdf-heroku", group: :production
