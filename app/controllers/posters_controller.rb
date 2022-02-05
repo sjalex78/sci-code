@@ -12,7 +12,8 @@ class PostersController < ApplicationController
     format.html
     format.pdf do
       render template: "posters/show", #.html.erb taken out as it is not needed for Rails 7
-        pdf: "Poster: #{@poster.id}"
+        pdf: "Poster: #{@poster.author}",
+        orientation:'Landscape'
         # formats: :html
       end
     end
