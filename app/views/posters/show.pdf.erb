@@ -1,9 +1,17 @@
-<p class="my-5">
-  <strong class="block font-medium mb-1">Title:</strong>
-  <%= @poster.title %>
-</p>
+<div class="poster">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= @poster.title %>
+  </p>
 
-<p class="my-5">
-  <strong class="block font-medium mb-1">Author:</strong>
-  <%= @poster.author %>
-</p>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Author:</strong>
+    <%= @poster.author %>
+  </p>`
+</div>
+<style>
+
+.poster {
+  <%=@poster.css%>
+}
+</style>

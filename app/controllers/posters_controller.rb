@@ -13,7 +13,8 @@ class PostersController < ApplicationController
     format.pdf do
       render template: "posters/show", #.html.erb taken out as it is not needed for Rails 7
         pdf: "Poster: #{@poster.author}",
-        orientation:'Landscape'
+        orientation:'Landscape',
+        background: true
         # formats: :html
       end
     end
@@ -74,6 +75,6 @@ class PostersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def poster_params
-      params.require(:poster).permit(:title, :author)
+      params.require(:poster).permit(:title, :author, :css)
     end
 end
