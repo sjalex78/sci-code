@@ -14,14 +14,12 @@ AllCops:
 Metrics/BlockLength:
   Description: allow features to be more descriptive and longer
   Exclude:
-    - "spec/features/**/*"
-    - "spec/requests/**/*"
-    - "spec/routing/**/*"
+    - "spec/**/*"
 
 RSpec/ExampleLength:
   Description: allow features to be more descriptive and longer
   Exclude:
-    - "spec/features/**/*"
+    - "spec/**/*"
 
 RSpec/InstanceVariable:
   Exclude:

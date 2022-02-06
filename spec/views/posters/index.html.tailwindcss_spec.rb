@@ -6,19 +6,31 @@ RSpec.describe 'posters/index', type: :view do
   before do
     assign(:posters, [
              Poster.create!(
-               title: 'Title',
-               author: 'Author',
+               title: 'Title 1',
+               author: 'Author 1',
              ),
              Poster.create!(
-               title: 'Title',
-               author: 'Author',
+               title: 'Title 2',
+               author: 'Author 2',
              ),
            ],)
   end
 
   it 'renders a list of posters' do
     render
-    assert_select 'tr>td', text: 'Title'.to_s, count: 2
-    assert_select 'tr>td', text: 'Author'.to_s, count: 2
+    posters = Capybara.string(response).find_all('p').map do |d|
+      strong_text = d.find('strong').text
+      remaining_text = d.text.sub(strong_text, '').strip
+      { strong_text => remaining_text }
+    end
+
+    expect(posters).to eq(
+      [
+        { 'Title:' => 'Title 1' },
+        { 'Author:' => 'Author 1' },
+        { 'Title:' => 'Title 2' },
+        { 'Author:' => 'Author 2' },
+      ],
+    )
   end
 end
