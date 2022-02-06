@@ -15,13 +15,20 @@ Metrics/BlockLength:
   Description: allow features to be more descriptive and longer
   Exclude:
     - "spec/features/**/*"
+    - "spec/requests/**/*"
+    - "spec/routing/**/*"
 
 RSpec/ExampleLength:
   Description: allow features to be more descriptive and longer
   Exclude:
     - "spec/features/**/*"
 
+RSpec/InstanceVariable:
+  Exclude:
+    - "spec/views/**/*"
+
 RSpec/MultipleExpectations:
+  Max: 5
   Description: allow features to be more descriptive and longer
   Exclude:
     - "spec/features/**/*"
@@ -44,4 +51,3 @@ Style/TrailingCommaInHashLiteral:
 
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: consistent_comma
-
