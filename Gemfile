@@ -54,6 +54,12 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  gem "rubocop", "~> 1.25", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec", "~> 2.8", require: false
+  gem "rubocop-rake", "~> 0.6.0", require: false
+  gem "rubocop-performance", "~> 1.13", require: false
 end
 
 group :development do
@@ -75,11 +81,6 @@ gem "rspec-rails", "~> 5.1"
 gem "selenium-webdriver", "~> 4.1"
 gem "site_prism", "~> 3.7"
 gem "webdrivers", "~> 5.0"
-
-gem "rubocop", "~> 1.25"
-gem "rubocop-rspec", "~> 2.8"
-gem "rubocop-rake", "~> 0.6.0"
-gem "rubocop-performance", "~> 1.13"
 
 #gems for html to pdf
 gem 'wicked_pdf'
