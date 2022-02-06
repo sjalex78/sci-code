@@ -16,7 +16,8 @@ class PostersController < ApplicationController
         render template: 'posters/show', # .html.erb taken out as it is not needed for Rails 7
                pdf: "Poster: #{@poster.author}",
                orientation: 'Landscape',
-               background: true
+               background: true,
+               show_as_html: params.key?('debug')
         # formats: :html
       end
     end
