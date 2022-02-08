@@ -1,5 +1,24 @@
-<div>
-
-<%= link_to "Create a poster!", new_poster_path, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium cursor-pointer"%>
-
+<div class = "container mx-auto px-4 me:container md:mx-auto">
+  <div class="grid grid-rows-4 grid-flow-col gap-4">
+    <div>
+      Sci-Poster-Creator(heading)
+    </div>
+    <div>
+      "poster" devider
+    </div>
+    <div>
+      <div class="grid grid-cols-4 gap-4">
+        <div>
+        Left info box
+        </div>
+        <div>
+          <%= link_to "Create a poster!", new_poster_path, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium cursor-pointer"%>
+        </div>
+        <div>
+          Right info panel
+        </div>
+      </div>
+    </div>
+    <div>SJA bottom section</div>
+  </div>
 </div>
