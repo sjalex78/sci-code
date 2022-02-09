@@ -53,6 +53,21 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# gems for html to pdf
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary', group: :development
+gem 'wkhtmltopdf-heroku', group: :production
+
+group :test do
+  gem 'capybara', '~> 3.36'
+  gem 'capybara-inline-screenshot', '~> 2.2'
+  gem 'rspec-example_steps', '~> 3.1'
+  gem 'rspec-rails', '~> 5.1'
+  gem 'selenium-webdriver', '~> 4.1'
+  gem 'site_prism', '~> 3.7'
+  gem 'webdrivers', '~> 5.0'
+end
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
@@ -74,16 +89,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
-gem 'capybara', '~> 3.36'
-gem 'capybara-inline-screenshot', '~> 2.2'
-gem 'rspec-example_steps', '~> 3.1'
-gem 'rspec-rails', '~> 5.1'
-gem 'selenium-webdriver', '~> 4.1'
-gem 'site_prism', '~> 3.7'
-gem 'webdrivers', '~> 5.0'
-
-# gems for html to pdf
-gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary', group: :development
-gem 'wkhtmltopdf-heroku', group: :production

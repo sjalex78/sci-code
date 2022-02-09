@@ -21,7 +21,7 @@ WickedPdf.config = {
   # (but can be overridden in `render :pdf` calls)
   # layout: 'pdf.html',
   layout: 'application',
-  default_protocol: 'https'
+  default_protocol: 'https',
   # Using wkhtmltopdf without an X server can be achieved by enabling the
   # 'use_xvfb' flag. This will wrap all wkhtmltopdf commands around the
   # 'xvfb-run' command, in order to simulate an X server.
