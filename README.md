@@ -31,3 +31,12 @@ tailwind was not configuring found that I needed to run the following command to
 ```command
 rails tailwindcss:build
 ```
+
+Running rspec
+```command
+bundle exec rspec spec\filename
+````
+
+Running with tailwind real time update to server
+```command
+bin/dev ```
