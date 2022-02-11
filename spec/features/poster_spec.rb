@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'new poster' do
+RSpec.describe 'new poster', js: true do
   it 'allows the user to create science poster' do
     When "a user visits the app" do
     visit root_path
