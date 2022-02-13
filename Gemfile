@@ -58,6 +58,9 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary', group: :development
 gem 'wkhtmltopdf-heroku', group: :production
 
+#user devise
+gem 'devise'
+
 group :test do
   gem 'capybara', '~> 3.36'
   gem 'capybara-inline-screenshot', '~> 2.2'
