@@ -26,4 +26,6 @@ RSpec.describe 'new poster', js: true do
     # TO_DO NEED TO WORK THIS OUT form = page.find("embed[type='application/pdf']")
     end
   end
+
+
 end
