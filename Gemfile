@@ -58,7 +58,7 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary', group: :development
 gem 'wkhtmltopdf-heroku', group: :production
 
-#user devise
+# user devise
 gem 'devise'
 
 group :test do
