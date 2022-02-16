@@ -5,6 +5,7 @@ class PostersController < ApplicationController
 
   # GET /posters or /posters.json
   def index
+    # poster_scope = Poster.joins(:contributor).where(contributor:{user:current_user})
     @posters = Poster.all
   end
 
