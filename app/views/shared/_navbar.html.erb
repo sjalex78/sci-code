@@ -22,7 +22,6 @@
           </div>
           <div class="hidden md:flex items-center space-x-1">
             <%=link_to "Home", root_path, class: "py-4 px-2 text-gray-500 border-b-4 border-purple-500 font-semibold" %>
-            <%= link_to "About", root_path,  class: "py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"%>
             <% if user_signed_in? %>
             <%= link_to "My posters", root_path, class: "py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"%>
             <%= link_to "Logout", destroy_user_session_path, data: { "turbo-method": :delete }, class: "py-4 px-2 text-gray-500 font-semibold hover:text-purple-500 transition duration-300"%>
@@ -40,9 +39,6 @@
             <ul class="">
               <li>
                 <%= link_to "Home", root_path, class:"block.text-sm.px-2.py-4 hover:bg-purple-500 transition duration-300"%>
-              </li>
-              <li>
-                <%= link_to "About", root_path, class:"block.text-sm.px-2.py-4 hover:bg-purple-500 transition duration-300"%>
               </li>
             <% if user_signed_in? %>
               <li>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :posters
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # hack to get around https://github.com/heartcombo/devise/issues/5439
+  # HACK: to get around https://github.com/heartcombo/devise/issues/5439
   # get "/", to: "posters#index", as: :user
 
   # Defines the root path route ("/")

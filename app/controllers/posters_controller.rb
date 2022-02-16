@@ -6,7 +6,7 @@ class PostersController < ApplicationController
   # GET /posters or /posters.json
   def index
     # poster_scope = Poster.joins(:contributor).where(contributor:{user:current_user})
-    @posters = Poster.all
+    @posters = Poster.where(:user_id => current_user.id)
   end
 
   # GET /posters/1 or /posters/1.json
@@ -35,8 +35,8 @@ class PostersController < ApplicationController
 
   # POST /posters or /posters.json
   def create
-    @poster = Poster.new(poster_params)
-
+    @poster = Poster.new(poster_params.merge(user: current_user))
+    @poster.contributors = [Contributor.new(user: current_user, role: 1)]
     respond_to do |format|
       if @poster.save
         format.html { redirect_to poster_url(@poster), notice: 'Poster was successfully created.' }
