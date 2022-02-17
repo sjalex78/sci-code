@@ -11,6 +11,13 @@
   </p>
 
   <% if action_name != "show" %>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Contributors:</strong>
+    <%# <%= poster.contributors.to_a.map{|contributor| [contributor.email, contributor.role]} %>
+    <%= render partial: "shared/contributor",
+      collection: poster.contributors,
+      spacer_template: "shared/ruler" %>
+  </p>
     <%= link_to "Show this poster", poster, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%= link_to 'Edit this poster', edit_poster_path(poster), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
     <hr class="mt-6">
