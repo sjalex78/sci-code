@@ -1,30 +1,27 @@
-# README
+# Sci_Poster_Generator <img src="/apps/assets/image/logo.png" alt="drawing" width="300"/>
+## General Info
+An app for secondary school students studying science to generate printable scientific posters and research posters. The app will also enable student collaboration and for feedback from educators which will help students learn to create science posters and refine their final poster output.
 
-```
-make build
-```
+## Table of contents
+* [General Info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Development](#development)
+* [Peculiarity For Development](#peculiarity-for-development)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Technologies
+Project is created with:
+* Rails: 7
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+## Setup
+## Architecture and models
+<!-- Give a quick overview of the few core models and how they interact. -->
+## Development
+<!-- Describe how to get started with the project. Document employed 3rd party
+services and how to use them, how to start a development server – just about
+anything that a new developer needs to know. -->
+## Peculiarity For Development
 ### Tailwind Build
 tailwind was not configuring found that I needed to run the following command to have it render correctly for the html. Still not sure if this will have to happen everytime?
 

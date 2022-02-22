@@ -3,6 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe 'new poster', js: true do
+  before do
+    
+  end
   it 'allows the user to create science poster' do
     When 'a user visits the app' do
       visit root_path
@@ -10,6 +13,11 @@ RSpec.describe 'new poster', js: true do
 
     Then 'a user can create a new poster' do
       click_on('Create a poster!')
+      form = page.find("form[action='#{user_session_path}']")
+      form.fill_in('user_email', with: 'p@p.com')
+      form.fill_in('user_password', with: 'password')
+      debugger
+      form.find("input[type='submit']").click
       form = page.find("form[action='#{posters_path}']")
       form.fill_in('poster_title', with: 'test_title')
       form.fill_in('poster_author', with: 'test_author')
