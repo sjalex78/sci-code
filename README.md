@@ -1,4 +1,4 @@
-# Sci_Poster_Generator <img src="/app/assets/image/logo.png" alt="drawing" width="300"/>
+# Sci_Poster_Generator <img src="/app/assets/images/logo.png" alt="drawing" width="300"/>
 ## General Info
 An app for secondary school students studying science to generate printable scientific posters and research posters. The app will also enable student collaboration and for feedback from educators which will help students learn to create science posters and refine their final poster output.
 
