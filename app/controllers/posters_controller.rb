@@ -5,7 +5,9 @@ class PostersController < ApplicationController
 
   # GET /posters or /posters.json
   def index
-    @posters = Poster.joins(:contributors).where(contributors: { user: current_user })
+    posters = Poster.joins(:contributors).where(contributors: { user: current_user })
+    @my_posters = posters.where(contributors: {role: :owner})
+    @collaborate_posters = posters.where.not(contributors:{role: :owner})
     # @posters = Poster.where(:user_id => current_user.id)
   end
 
