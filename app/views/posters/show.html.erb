@@ -5,25 +5,64 @@
 }
 </style>
 
-<div class="poster">
-  <div class="mx-auto">
+<div class="poster rounded-lg">
+  <div class="container mx-auto shadow-lg">
     <% if notice.present? %>
-      <p class="py-2 px-3 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+      <p class="py-2 px-3 font-medium rounded-lg inline-block " id="notice"><%= notice %></p>
     <% end %>
+      <div class="col-span-3 h-24 " id="poster-header">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">
+          <%= @poster.title %>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-3" id="poster-body">
+    <div class="bg-slate-700 p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 ">
+    <!--Card 1-->
+    <div class="rounded overflow-hidden shadow-lg bg-white">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Inputs</div>
+        <ul class="text-gray-700 text-base">
+          List here
+        </ul>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <%= link_to 'Edit', edit_poster_path(@poster), class: "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" %>
+      </div>
+    </div>
+    <!--Card 2-->
+    <div class="rounded overflow-hidden shadow-lg bg-white">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Dig a little deeper</div>
+        <p class="text-gray-700 text-base">
 
-    <%= render @poster %>
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <%= button_to 'Delete', poster_path(@poster), method: :delete, class: "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" %>
+        <%= link_to "View PDF", poster_path(@poster, format: :pdf), class: "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" %>
+        <%= link_to "Share", poster_path(@poster, format: :pdf), class: "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" %>
+      </div>
+    </div>
 
-    <div class="inline-block ml-2">
-      <%= link_to 'Edit', edit_poster_path(@poster), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium cursor-pointer" %>
-    </div>
-    <div class="inline-block ml-2">
-      <%= button_to 'Delete', poster_path(@poster), method: :delete, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium cursor-pointer" %>
-    </div>
-    <div class="inline-block ml-2">
-      <%= link_to "View PDF", poster_path(@poster, format: :pdf), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium cursor-pointer" %>
-    </div>
-    <div class="inline-block ml-2">
-      <%= link_to "Home", root_path, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium cursor-pointer" %>
+    <!--Card 3-->
+    <div class="rounded overflow-hidden shadow-lg bg-white">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Tips and Tricks</div>
+        <p class="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+      </div>
     </div>
   </div>
+</div>
+    </div>
+  </div>
+<div class="mt-10">
+      <%= link_to "My Posters", posters_path, class: "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer" %>
+      <%= link_to "Home", root_path, class: "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer" %>
+</div>
 </div>
