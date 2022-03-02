@@ -61,6 +61,9 @@ gem 'wkhtmltopdf-heroku', group: :production
 # user devise
 gem 'devise'
 
+#icons using font awesome
+gem "font-awesome-rails"
+
 group :test do
   gem 'capybara', '~> 3.36'
   gem 'capybara-inline-screenshot', '~> 2.2'
