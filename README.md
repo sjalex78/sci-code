@@ -15,6 +15,18 @@ Project is created with:
 * Rails: 7
 
 ## Setup
+
+```
+bin/setup # should do it all
+```
+
+also
+
+```
+make
+make db-reseed
+```
+
 ## Architecture and models
 <!-- Give a quick overview of the few core models and how they interact. -->
 ## Development
