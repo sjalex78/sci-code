@@ -3,5 +3,6 @@
 class Poster < ApplicationRecord
   has_many :contributors, dependent: :destroy
   has_many :users, through: :contributors
+  has_many :components
   belongs_to :user
 end
