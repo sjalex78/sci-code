@@ -13,6 +13,7 @@ class PostersController < ApplicationController
 
   # GET /posters/1 or /posters/1.json
   def show
+    @components = Poster.find(params[:id]).components
     respond_to do |format|
       format.html
       format.pdf do
