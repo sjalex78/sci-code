@@ -17,9 +17,11 @@ ActiveRecord::Schema.define(version: 2022_03_02_223843) do
   enable_extension "plpgsql"
 
   create_table "components", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "poster_id", null: false
     t.jsonb "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["poster_id"], name: "index_components_on_poster_id"
   end
 
   create_table "contributors", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
