@@ -25,6 +25,9 @@ also
 ```
 make
 make db-reseed
+make rubocop
+make rubocop-fix
+make build
 ```
 
 ## Architecture and models

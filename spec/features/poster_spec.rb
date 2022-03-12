@@ -7,6 +7,7 @@ RSpec.describe 'new poster', js: true do
     before do
       User.create! email: 'p@p.com', password: 'password', password_confirmation: 'password'
     end
+
     it 'allows the user to create science poster' do
       When 'a user visits the app' do
         visit root_path

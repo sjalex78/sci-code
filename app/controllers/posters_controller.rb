@@ -6,13 +6,13 @@ class PostersController < ApplicationController
   # GET /posters or /posters.json
   def index
     posters = Poster.joins(:contributors).where(contributors: { user: current_user })
-    @my_posters = posters.where(contributors: {role: :owner})
-    @collaborate_posters = posters.where.not(contributors:{role: :owner})
+    @my_posters = posters.where(contributors: { role: :owner })
+    @collaborate_posters = posters.where.not(contributors: { role: :owner })
     # @posters = Poster.where(:user_id => current_user.id)
   end
 
   # GET /posters/1 or /posters/1.json
-  def show
+  def show # rubocop:disable Metrics/MethodLength
     @components = Poster.find(params[:id]).components
     respond_to do |format|
       format.html
@@ -37,7 +37,7 @@ class PostersController < ApplicationController
   end
 
   # POST /posters or /posters.json
-  def create
+  def create # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
     @poster = Poster.new(poster_params.merge(user: current_user))
     @poster.contributors = [Contributor.new(user: current_user, role: :owner)]
     respond_to do |format|

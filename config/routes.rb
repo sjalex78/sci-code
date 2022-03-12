@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
-  resources :posters
+  resources :posters do
+    resources :components, only: %i[new create]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # HACK: to get around https://github.com/heartcombo/devise/issues/5439
