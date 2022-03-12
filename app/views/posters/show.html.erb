@@ -13,7 +13,7 @@
       <div class="col-span-3 h-24 " id="poster-header">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">
-          <%= @components.find{|c| c.data.dig("type") == "title"}.data.dig("text") %>
+          <%= @components.find{|c| c.data.dig("type") == "title"}&.data&.dig("text") %>
           </div>
         </div>
       </div>
